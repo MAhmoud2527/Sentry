@@ -9857,7 +9857,11 @@ padding-top: 60px;
 
 /* Footer */
 #footer{
-  background: #000000d1
+  background: #000000d1;
+  background-image:url(../images/map-image.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 #footer .inner {
   padding: 5em 0 3em 0 ;
@@ -10025,6 +10029,7 @@ ul.contact {
     text-decoration: none;
     margin: 2.5em 0 0 0;
     padding: 0 0 0 3.25em;
+    color: aliceblue;
     position: relative;
   }
 
