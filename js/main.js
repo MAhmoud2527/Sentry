@@ -237,6 +237,55 @@
 		cursorborder: "1px solid #000"
 	});
 
+
+
+	  // ANIMATING MAIN HEADER TYPING!
+    var headeingArray = ['مواقع الإنترنت و تطبيقات الجوّال'];
+    var mainHeader = document.getElementById("heading");
+
+    function autoTying(){
+        mainHeader.style.opacity = '1';
+        mainHeader.textContent = '';
+        var randomNum = Math.floor(Math.random() * headeingArray.length);
+        var i = 0;
+        var text = headeingArray[randomNum];
+        var effect = setInterval(function(){  
+            mainHeader.textContent += text[i];
+                i++ 
+            if (i == text.length){
+                mainHeader.textContent = text;
+            clearInterval(effect);
+            }
+        },60);
+    }
+		autoTying();
+		
+		 // clicking on h3 in section solutions to toggle p
+    
+
+		 $(".solutions .right div").on("click", function () {
+			this.children[2].classList.toggle('zeroHeight');
+			this.children[0].classList.toggle('rotate');
+			this.children[1].classList.toggle('colorIt');
+			
+			var otherP = $(this).siblings().find("p");
+			for(var i = 0; i <otherP.length;i++ ){
+					otherP[i].classList.add('zeroHeight');
+			}
+			var otheri = $(this).siblings().find("i");
+			for(var i = 0; i <otherP.length;i++ ){
+					otheri[i].classList.remove('rotate');
+			}
+
+			var otherh = $(this).siblings().find("h3");
+			for(var i = 0; i <otherh.length;i++ ){
+					otherh[i].classList.remove('colorIt');
+			}
+
+			
+	});
+		
+
 })(jQuery);
 
 	
