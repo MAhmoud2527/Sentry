@@ -255,10 +255,19 @@
             if (i == text.length){
                 mainHeader.textContent = text;
             clearInterval(effect);
-            }
-        },60);
-    }
-		autoTying();
+						changeText()
+					}
+			},60);
+	}
+	autoTying();
+
+ function changeText(){
+	
+	setTimeout(function(){
+			mainHeader.style.opacity = '0';
+			autoTying();
+	}, 1000);
+	}
 		
 		 // clicking on h3 in section solutions to toggle p
     
